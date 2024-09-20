@@ -1,0 +1,26 @@
+sCrypt Overview
+sCrypt is an embedded Domain Specific Language (eDSL) based on TypeScript for writing smart contracts on Bitcoin SV. Embedded means that it is a language inside another language. sCrypt is strictly a subset of TypeScript, so all sCrypt code is valid TypeScript, but 
+not vice versa.
+
+How do Bitcoin Smart Contracts work?
+Smart contracts on Bitcoin are based on the UTXO model, which is very different from an account model like Ethereum used.
+
+UTXO model :-
+Each bitcoin transaction consists of some inputs and outputs. An output contains:
+
+The amount of bitcoins it contains.
+bytecodes (called the locking script).
+while an input contains:
+
+A reference to the previous transaction output.
+bytecodes (the unlocking script).
+An Unspent Transaction Output (UTXO) is an output not consumed in any transaction yet. The low-level bytecode/opcode is called Bitcoin Script, which is interpreted by the Bitcoin Virtual Machine (BVM).
+
+scrypt-cli CLI
+scrypt-cli is a CLI tool that makes sCrypt development faster and easier.
+
+Let us use scrypt-cli to create a project:
+
+npx scrypt-cli project tic-tac-toe
+
+
